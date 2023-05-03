@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+.img{
+    position: relative;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.text{
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-transform:uppercase ;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.text h2{
+    font-size: 30px;
+    font-weight: 300;
+    transform: translateY(-30px);
+    transition: all 0.7s;
+}
+
+.text p{
+    font-size: 14px;
+    font-weight: 400;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.text span{
+    font-weight: 800;
+}
+.img:hover h2{
+    transform: translateY(-70px);
+}
+.img:hover p{
+    transform: translateY(-70px);
+    opacity: 1;
+    transition: all 0.7s 0.2s ease-out;
+}
+.img img{
+    opacity: 0.8;
+    transition: all 0.3s;
+    transform: translateX(-10px) scale(1.3);
+}
+.img:hover img{
+    opacity: 1;
+    transform: translateX(20px) scale(1.3);
+}
+body{
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+ /* **************two image*************** */
+
+ .honey .bottom{
+    /* background-color: #000000;
+    color: white; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 70px ;
+    padding-left: 45px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.7s;
+ }
+ .honey{
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 40px;
+
+ }
+ .honey .bottom h2{
+    font-size: 30px;
+    font-weight: 300;
+    transition: all 0.7s;
+    color: white;
+    text-transform: uppercase;
+ }
+ .fat{
+    font-weight: 800;
+ }
+ .slim{
+    opacity: 0;
+    transition: all 0.3s;
+ }
+ .honey:hover .bottom h2{
+    transform: translateY(40px);
+ }
+ .honey:hover .slim{
+    opacity: 1;
+ }
+ .honey .bottom::after{
+    content: "";
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    height: 10px;
+    bottom: -10px;
+    left: 0;
+    display: inline-block;
+    transition: all 0.7s;
+ }
+ .honey .bottom:hover::after{
+    bottom: 0;
+ }
+
+ .zoe{
+    margin-bottom: 40px;
+    position: relative;
+ }
+ .zoe .all{
+    /* background-color: rgb(255, 4, 4); */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+ }
+ .zoe .all .top{
+    padding: 36px;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ }
+
+ .zoe .all .bottom{
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   transform: translateY(100%);
+   transition: all 0.3s;
+ }
+.zoe .all:hover .bottom{
+   transform: translateY(0);
+}
+ .zoe .all .bottom h2   {
+   font-size: 30px;
+   font-weight: 300;
+   transform: translateY(20px);
+   transition: all 0.45s;
+   text-transform: uppercase;
+ }
+
+.zoe .all:hover .bottom h2{
+   transform: translateY(0);
+} 
+ 
+.zoe .all .bottom h2 span{
+   font-weight: 800;
+}
+
+.zoe .all .bottom .menu i{
+   font-size: 19px;
+   margin-left: 10px;
+   transform: translateY(20px);
+   transition: all 0.4s;
+}
+.zoe .all:hover .bottom .menu i{
+   transform: translateY(0);
+}
+.zoe .all:hover .bottom .menu i.fa-eye{
+   transition-delay: 0.1s;
+}
+.zoe .all:hover .bottom .menu i.fa-paperclip{
+   transition-delay: 0.2s;
+}
+.zoe .all .top p{
+   transform: translateY(20px);
+   transition: all 0.3s;
+   opacity: 0;
+}
+.zoe .all:hover .top p{
+   transform: translateY(0);
+   opacity: 1;
+}
+ .sadie{
+    margin-bottom: 40px;
+    position: relative;
+ }
+ .sadie .all{
+    position: absolute;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column; 
+    overflow: hidden;
+ }
+ .sadie .all h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #484c61;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 35px;
+    transition: all 0.3s;
+ }
+ .sadie .all .bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+ }
+ .sadie .all .bottom p{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    opacity: 0;
+    transition: all 0.2s;
+ }
+ .sadie .all h2 span{
+    font-weight: 800;
+ }
+
+ .sadie .all:hover h2{
+    top: 40%;
+    color: white;
+ }
+ .sadie .all:hover .bottom p{
+    opacity: 1;
+    transform: translateY(-15px);
+ }
+
+ .sadie .all .hide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:100%;
+    background-image: linear-gradient(rgba(19, 19, 44, 0) 0%, rgba(72,76,97,0.8) 75%);    
+    transition: all 0.3s;      
+ }
+ .sadie .all:hover .hide{
+    top: 0;
+ }
+
+ .goliath{
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 40px;
+ }
+ .goliath .all{
+   position: absolute;
+   /* background-color: red; */
+   height: 100%;
+   width: 100%;
+   top:0;
+   left:0;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   color: white;
+ }
+ .goliath .all h2{
+   padding: 30px;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-weight: 300;
+   flex-grow: 1;
+   display: flex;
+   align-items: end;
+ }
+ .goliath .all h2 span{
+   font-weight: 800;
+ }
+.goliath .all .bottom{
+   background-color: tomato;
+   padding: 30px;
+   transform: translateY(100%);
+   /* position: absolute;
+   bottom: -100%; */
+   width: 100%;
+   transition: all 0.9s;
+}
+.goliath .all:hover .bottom{
+   /* bottom: 0; */
+   transform: translateY(0);
+}
+.goliath .all .bottom p{
+   font-weight: 400;
+   font-size: 18px;
+}
+.goliath img{
+   transition: all 0.9s;
+}
+.goliath:hover img{
+   height: 20%;
+}
